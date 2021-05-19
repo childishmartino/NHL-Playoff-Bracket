@@ -1,0 +1,2 @@
+DROP DATABASE IF EXISTS playoffs_db;
+CREATE DATABASE playoffs_db;
