@@ -1,92 +1,10 @@
-  <section id="bracket">
-    <div class="container">
-      <div class="split split-one">
-
-        <div class="round round-one current">
-          <div class="round-details">Round 1<br /><span class="date">Starts 5/16</span></div>
-          <ul class="matchup">
-            <li class="team team-top">Colorado Avalanche<span class="score">1</span></li>
-            <li class="team team-bottom">St. Louis Blues<span class="score">4</span></li>
-          </ul>
-          <ul class="matchup">
-            <li class="team team-top">Vegas Golden Knights<span class="score">2</span></li>
-            <li class="team team-bottom">Minessota Wild<span class="score">3</span></li>
-          </ul>
-          <ul class="matchup">
-            <li class="team team-top">Toronto Maple Leafs<span class="score">1</span></li>
-            <li class="team team-bottom">Montreal Canadiens<span class="score">4</span></li>
-          </ul>
-          <ul class="matchup">
-            <li class="team team-top">Edmonton Oilers<span class="score">2</span></li>
-            <li class="team team-bottom">Winnipeg Jets<span class="score">3</span></li>
-          </ul>
-        </div> <!-- END ROUND ONE -->
-
-        <div class="round round-two">
-          <div class="round-details">Round 2<br /><span class="date"></span></div>
-          <ul class="matchup">
-            <li class="team team-top">&nbsp;<span class="score">&nbsp;</span></li>
-            <li class="team team-bottom">&nbsp;<span class="score">&nbsp;</span></li>
-          </ul>
-          <ul class="matchup">
-            <li class="team team-top">&nbsp;<span class="score">&nbsp;</span></li>
-            <li class="team team-bottom">&nbsp;<span class="score">&nbsp;</span></li>
-          </ul>
-        </div> <!-- END ROUND TWO -->
-
-        <div class="round round-three">
-          <div class="round-details">Round 3<br /><span class="date">March 22</span></div>
-          <ul class="matchup">
-            <li class="team team-top">&nbsp;<span class="score">&nbsp;</span></li>
-            <li class="team team-bottom">&nbsp;<span class="score">&nbsp;</span></li>
-          </ul>
-        </div> <!-- END ROUND Three -->
-        <div class="champion">
-          <div class="semis-l">
-            <div class="round-details">west semifinals <br /><span class="date">March 26-28</span></div>
-            <ul class="matchup championship">
-              <li class="team team-top">&nbsp;<span class="vote-count">&nbsp;</span></li>
-              <li class="team team-bottom">&nbsp;<span class="vote-count">&nbsp;</span></li>
-            </ul>
-          </div> <!-- END ROUND Championship -->
-
-        </div>
-      </div>
-      <div class="split split-two">
-        <div class="round round-three">
-          <div class="round-details">Round 3<br /><span class="date">March 22</span></div>
-          <ul class="matchup">
-            <li class="team team-top">&nbsp;<span class="score">&nbsp;</span></li>
-            <li class="team team-bottom">&nbsp;<span class="score">&nbsp;</span></li>
-          </ul>
-        </div> <!-- END ROUND Three -->
-        <div class="round round-two">
-          <div class="round-details">Round 2<br /><span class="date">March 18</span></div>
-          <ul class="matchup">
-            <li class="team team-top">&nbsp;<span class="score">&nbsp;</span></li>
-            <li class="team team-bottom">&nbsp;<span class="score">&nbsp;</span></li>
-          </ul>
-          <ul class="matchup">
-            <li class="team team-top">&nbsp;<span class="score">&nbsp;</span></li>
-            <li class="team team-bottom">&nbsp;<span class="score">&nbsp;</span></li>
-          </ul>
-        </div> <!-- END ROUND TWO -->
-        <div class="round round-one current">
-          <div class="round-details">Round 1<br /><span class="date">Start 5/16</span></div>
-          <ul class="matchup">
-            <li class="team team-top">Pittsburgh Penguins<span class="score">1</span></li>
-            <li class="team team-bottom">New York Islanders<span class="score">4</span></li>
-          </ul>
-          <ul class="matchup">
-            <li class="team team-top">Washington Capitals<span class="score">2</span></li>
-            <li class="team team-bottom">Boston Bruins<span class="score">3</span></li>
-          </ul>
-          <ul class="matchup">
-            <li class="team team-top">Carolina Hurricanes<span class="score">1</span></li>
-            <li class="team team-bottom">Nashville Predators<span class="score">4</span></li>
-          </ul>
-          <ul class="matchup">
-            <li class="team team-top">Florida Panthers<span class="score">2</span></li>
-            <li class="team team-bottom">Tammpa Bay Lightning<span class="score">3</span></li>
-          </ul>
-        </div> <!-- END ROUND ONE -->
+{{#if logged_in}}
+<a href="/profile"><button type="button" class="btn btn-primary">Profile</button></a>
+{{else}}
+<a href="/login"><button type="button" class="btn btn-primary">Login</button></a>
+{{/if}}
+{{#if logged_in}}
+<a href="/bracket"><button type="button" class="btn btn-primary">Bracket</button></a>
+{{else}}
+<a href="/login"><button type="button" class="btn btn-primary">Bracket</button></a>
+{{/if}}
