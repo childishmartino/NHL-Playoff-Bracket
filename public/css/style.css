@@ -1,4 +1,4 @@
-body {font-family: 'Istok Web', sans-serif;background: url("http://picjumbo.com/wp-content/uploads/HNCK2189-1300x866.jpg") no-repeat #fff;background-size: cover;min-height: 100%;margin: 0;}
+body {font-family: 'Istok Web', sans-serif;background: url("http://picjumbo.com/wp-content/uploads/HNCK2189-1300x866.jpg") no-repeat rgb(7, 7, 7);background-size: cover;min-height: 100%;margin: 0;}
 .hero {position:relative; text-align: center; overflow: hidden; color: #fcfcfc; }
 .hero h1 {font-family: 'Holtwood One SC', serif;font-weight: normal;font-size: 5.4em;margin:0 0 20px; text-shadow:0 0 12px rgba(0, 0, 0, 0.5);text-transform: uppercase;letter-spacing:-1px;}
 .hero p {font-family: 'Abel', sans-serif;text-transform: uppercase; color: #5CCA87; letter-spacing: 6px;text-shadow:0 0 12px rgba(0, 0, 0, 0.5);font-size: 1.2em;}
@@ -29,6 +29,47 @@ body {font-family: 'Istok Web', sans-serif;background: url("http://picjumbo.com/
 .share-icon {font-size: 24px; color: #fff;padding: 25px;}
 .share-wrap {max-width: 1100px; text-align: center; margin: 60px auto;}
 .final {margin: 4.5em 0;}
+
+#name-signup,#email-signup,#password-signup,#signupBtn{
+  text-align: center;
+  display: block;
+  margin: 0 auto;
+}
+
+#email-login,#password-login,#loginBtn{
+  text-align: center;
+  display: block;
+  margin: 0 auto;
+}
+
+#signup{
+  text-align: center;
+  color: white;
+  
+}
+
+#login{
+  text-align: center;
+  color: white;
+}
+/* .form-input{
+  display: block;
+  margin: 0 auto;
+} */
+
+/* #navBtn{
+  background-color:#5CCA87 ;
+} */
+#loginBtn,#signupBtn{
+  background-color: #5CCA87;
+  border: none;
+  margin-top: 2%;
+}
+.btn-primary, .btn-primary:hover, .btn-primary:active, .btn-primary:visited {
+  background-color: #5cca87 !important;
+  border: none !important;
+  margin: 1%;
+}
 
 @-webkit-keyframes pulse {
   0% {
