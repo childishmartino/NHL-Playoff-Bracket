@@ -52,6 +52,12 @@ body {font-family: 'Istok Web', sans-serif;background: url("http://picjumbo.com/
   text-align: center;
   color: white;
 }
+#welcome{
+  width: 100% !important;
+  display: block;
+  text-align: center;
+  color:white;
+}
 /* .form-input{
   display: block;
   margin: 0 auto;
