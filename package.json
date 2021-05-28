@@ -20,7 +20,7 @@
     "express-session": "^1.17.1",
     "mysql2": "^2.2.5",
     "sequelize": "^6.3.5",
-    "sportsdataverse": "^1.1.2"
+    "sportsdataverse": "^1.1.4"
   },
   "devDependencies": {
     "eslint": "^7.12.1",
