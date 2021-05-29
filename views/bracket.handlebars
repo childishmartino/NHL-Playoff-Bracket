@@ -1,12 +1,12 @@
 <div class="row">
-    <div class="col-auto" id='welcome'>
+    <div class="col-auto">
         <h2>Welcome, {{name}}!</h2>
     </div>
 </div>
 <section id="bracket">
     <div class="container">
         <div class="split split-one">
-            <div class="round round-two">
+            <div class="round round-one">
                 <div class="round-details">Round 1<br /><span class="date">March 18</span></div>
                 <ul class="matchup">
                     <li class="team team-top">&nbsp;<span class="score">&nbsp;</span>Colorado Avalanche</li>
@@ -17,70 +17,98 @@
                     <li class="team team-bottom">&nbsp;<span class="score">&nbsp;</span>Minnesota Wild</li>
                 </ul>
                 <ul class="matchup">
-                    <li class="team team-top">&nbsp;<span class="score">&nbsp;</span>Pittsburgh Penguins</li>
-                    <li class="team team-bottom">&nbsp;<span class="score">&nbsp;</span>New York Islanders</li>
+                    <li class="team team-top">&nbsp;<span class="score">&nbsp;</span>Carolina Hurricanes</li>
+                    <li class="team team-bottom">&nbsp;<span class="score">&nbsp;</span>Nashville Predators</li>
                 </ul>
                 <ul class="matchup">
-                    <li class="team team-top">&nbsp;<span class="score">&nbsp;</span>Washington Capitals</li>
-                    <li class="team team-bottom">&nbsp;<span class="score">&nbsp;</span>Boston Bruins</li>
+                    <li class="team team-top">&nbsp;<span class="score">&nbsp;</span>Florida Panthers</li>
+                    <li class="team team-bottom">&nbsp;<span class="score">&nbsp;</span>Tampa Bay Lightning</li>
                 </ul>
-            </div> <!-- END ROUND TWO -->
+            </div> <!-- END ROUND ONE -->
 
-            <div class="round round-three">
+            <div class="round round-two">
                 <div class="round-details">Round 2<br /><span class="date">March 22</span></div>
                 <ul class="matchup">
                     <li class="team team-top">&nbsp;<span class="score">&nbsp;
-                            <select id="westfirst">
+                            <select id="west1" onchange="westRoundTwoChange()">
                                 <option value="None">-- Select --</option>
-                                <option value="ID001">Colorado Avalanche</option>
-                                <option value="ID002" selected>St.Louis Blues</option>
+                                <option value="W1">Colorado Avalanche</option>
+                                <option value="W4">St.Louis Blues</option>
                             </select></span></li>
                     <li class="team team-bottom">&nbsp;<span class="score">&nbsp;
-                            <select id="westsecond">
+                            <select id="west2" onchange="westRoundTwoChange()">
                                 <option value="None">-- Select --</option>
-                                <option value="ID003">Vegas Golden Knights</option>
-                                <option value="ID004" selected>Minnesota Wild</option>
+                                <option value="W2">Vegas Golden Knights</option>
+                                <option value="W3">Minnesota Wild</option>
                             </select></span></li>
                 </ul>
                 <ul class="matchup">
                     <li class="team team-top">&nbsp;<span class="score">&nbsp;
-                            <select id="eastfirst">
+                            <select id="central1" onchange="centralRoundTwoChange()">
                                 <option value="None">-- Select --</option>
-                                <option value="ID005">Pittsburgh Penguins</option>
-                                <option value="ID006" selected>NY Islanders</option>
-                            </select></span></li>
+                                <option value="C1">Carolina Hurricanes</option>
+                                <option value="C3">Nashville Predators</option>
+                            </select>
+                        </span></li>
                     <li class="team team-bottom">&nbsp;<span class="score">&nbsp;
-                            <select id="eastsecond">
+                            <select id="central2" onchange="centralRoundTwoChange()">
                                 <option value="None">-- Select --</option>
-                                <option value="ID007">Washington Capitals</option>
-                                <option value="ID008" selected>Boston Bruins</option>
+                                <option value="C2">Florida Panthers</option>
+                                <option value="C4">Tampa Bay Lightning</option>
                             </select>
                         </span></li>
                 </ul>
-            </div> <!-- END ROUND THREE -->
+            </div> <!-- END ROUND TWO -->
         </div>
 
         <div class="champion">
             <div class="semis-l">
                 <div class="round-details">west semifinals <br /><span class="date">March 26-28</span></div>
                 <ul class="matchup championship">
-                    <li class="team team-top">&nbsp;<span class="vote-count">&nbsp;
-                            <select id="westsemifinal1">
+                    <li id="westSemi" class="team team-top">&nbsp;<span class="vote-count">&nbsp;
+                            <select id="w1VsW2" class="hide">
                                 <option value="None">-- Select --</option>
-                                <option value="ID001">Colorado Avalanche</option>
-                                <option value="ID002" selected>St.Louis Blues</option>
-                                <option value="ID003">Vegas Golden Knights</option>
-                                <option value="ID004" selected>Minnesota Wild</option>
+                                <option value="W1">Colorado Avalanche</option>
+                                <option value="W2">Vegas Golden Knights</option>
+                            </select>
+                            <select id="w1VsW3" class="hide">
+                                <option value="None">-- Select --</option>
+                                <option value="W1">Colorado Avalanche</option>
+                                <option value="W3">Minnesota Wild</option>
+                            </select>
+                            <select id="w4VsW2" class="hide">
+                                <option value="None">-- Select --</option>
+                                <option value="W4">St.Louis Blues</option>
+                                <option value="W2">Vegas Golden Knights</option>
+                            </select>
+                            <select id="w4VsW2" class="hide">
+                                <option value="None">-- Select --</option>
+                                <option value="W4">St.Louis Blues</option>
+                                <option value="W3">Minnesota Wild</option>
                             </select>
                         </span></li>
-                    <li class="team team-bottom">&nbsp;<span class="vote-count">&nbsp;</span>
-                        <select id="westsemifinal2">
-                            <option value="None">-- Select --</option>
-                            <option value="ID009">Carolina Hurricanes</option>
-                            <option value="ID010" selected>Nashville Predators</option>
-                            <option value="ID011">Florida Panthers</option>
-                            <option value="ID012" selected>Tampa Bay Lightning</option>
-                        </select>
+                    <li id="eastSemi"class="team team-bottom">&nbsp;<span class="vote-count">&nbsp;</span>
+                            <select id="e1VsE2" class="hide">
+                                <option value="None">-- Select --</option>
+                                <option value="E1">Pittsburgh Penguins</option>
+                                <option value="E2">Washington Capitols</option>
+                            </select>
+                            <select id="e1VsE3" class="hide">
+                                <option value="None">-- Select --</option>
+                                <option value="E1">Pittsburgh Penguins</option>
+                                <option value="E3">Boston Bruins</option>
+                            </select>
+                            <select id="e4VsE2" class="hide">
+                                <option value="None">-- Select --</option>
+                                <option value="E4">NY Islanders</option>
+                                <option value="E2">Washington Capitols</option>
+                            </select>
+                            <select id="e4VsE2" class="hide">
+                                <option value="None">-- Select --</option>
+                                <option value="E4">NY Islanders</option>
+                                <option value="E3">Boston Bruins</option>
+                            </select>
+                        </span></li>
                     </li>
                 </ul>
             </div>
@@ -92,26 +120,26 @@
                             <select id="final1">
                                 <option value="None">-- Select --</option>
                                 <option value="ID001">Colorado Avalanche</option>
-                                <option value="ID002" selected>St.Louis Blues</option>
+                                <option value="ID002">St.Louis Blues</option>
                                 <option value="ID003">Vegas Golden Knights</option>
-                                <option value="ID004" selected>Minnesota Wild</option>
+                                <option value="ID004">Minnesota Wild</option>
                                 <option value="ID005">Pittsburgh Penguins</option>
-                                <option value="ID006" selected>NY Islanders</option>
+                                <option value="ID006">NY Islanders</option>
                                 <option value="ID007">Washington Capitals</option>
-                                <option value="ID008" selected>Boston Bruins</option>
+                                <option value="ID008">Boston Bruins</option>
                             </select>
                         </span></li>
                     <li class="team team-bottom">&nbsp;<span class="vote-count">&nbsp;
                             <select id="eastsemifinal1">
                                 <option value="None">-- Select --</option>
                                 <option value="ID009">Carolina Hurricanes</option>
-                                <option value="ID010" selected>Nashville Predators</option>
+                                <option value="ID010">Nashville Predators</option>
                                 <option value="ID011">Florida Panthers</option>
-                                <option value="ID012" selected>Tampa Bay Lightning</option>
+                                <option value="ID012">Tampa Bay Lightning</option>
                                 <option value="ID013">Toronto Maple Leafs</option>
-                                <option value="ID014" selected>Montreal Canadiens</option>
+                                <option value="ID014">Montreal Canadiens</option>
                                 <option value="ID015">Edmonton Oilers</option>
-                                <option value="ID016" selected>Winnepeg Jets</option>
+                                <option value="ID016">Winnepeg Jets</option>
                             </select>
                         </span></li>
                 </ul>
@@ -119,22 +147,35 @@
             <div class="semis-r">
                 <div class="round-details">east semifinals <br /><span class="date">March 26-28</span></div>
                 <ul class="matchup championship">
-                    <li class="team team-top">&nbsp;<span class="vote-count">&nbsp;
-                            <select id="eastsemifinal1">
+                    <li id="centralSemi" class="team team-top">&nbsp;<span class="vote-count">&nbsp;
+                            <select id="c1VsC2" class="hide">
                                 <option value="None">-- Select --</option>
-                                <option value="ID005">Pittsburgh Penguins</option>
-                                <option value="ID006" selected>NY Islanders</option>
-                                <option value="ID007">Washington Capitals</option>
-                                <option value="ID008" selected>Boston Bruins</option>
+                                <option value="C1">Carolina Hurricanes</option>
+                                <option value="C2">Florida Panthers</option>
+                            </select>
+                            <select id="c1VsC3" class="hide">
+                                <option value="None">-- Select --</option>
+                                <option value="C1">Carolina Hurricanes</option>
+                                <option value="C3">Tampa Bay Lightning</option>
+                            </select>
+                            <select id="c4VsC2" class="hide">
+                                <option value="None">-- Select --</option>
+                                <option value="C4">Nashville Predators</option>
+                                <option value="C2">Florida Panthers</option>
+                            </select>
+                            <select id="c4VsC2" class="hide">
+                                <option value="None">-- Select --</option>
+                                <option value="C4">Nashville Predators</option>
+                                <option value="C3">Tampa Bay Lightning</option>
                             </select>
                         </span></li>
                     <li class="team team-bottom">&nbsp;<span class="vote-count">&nbsp;
                             <select id="eastsemifinal1">
                                 <option value="None">-- Select --</option>
                                 <option value="ID013">Toronto Maple Leafs</option>
-                                <option value="ID014" selected>Montreal Canadiens</option>
+                                <option value="ID014">Montreal Canadiens</option>
                                 <option value="ID015">Edmonton Oilers</option>
-                                <option value="ID016" selected>Winnepeg Jets</option>
+                                <option value="ID016">Winnepeg Jets</option>
                             </select>
                         </span></li>
                 </ul>
@@ -145,52 +186,50 @@
         <div class="split split-two">
 
 
-            <div class="round round-three">
+            <div class="round round-two">
                 <div class="round-details">Round 2<br /><span class="date">March 22</span></div>
                 <ul class="matchup">
                     <li class="team team-top">&nbsp;<span class="score">&nbsp;
-
+                            <select id="east1" onchange="eastRoundTwoChange()">
+                                <option value="None">-- Select --</option>
+                                <option value="E1">Pittsburgh Penguins</option>
+                                <option value="E4">NY Islanders</option>
+                            </select></span></li>
+                    <li class="team team-bottom">&nbsp;<span class="score">&nbsp;
+                            <select id="east2" onchange="eastRoundTwoChange()">
+                                <option value="None">-- Select --</option>
+                                <option value="E2">Washington Capitals</option>
+                                <option value="E3">Boston Bruins</option>
+                            </select>
+                        </span></li>
+                </ul>
+                <ul class="matchup">
+                    <li class="team team-top">&nbsp;<span class="score">&nbsp;
                             <select id="centralfirst">
                                 <option value="None">-- Select --</option>
-                                <option value="ID009">Carolina Hurricanes</option>
-                                <option value="ID010" selected>Nashville Predators</option>
+                                <option value="ID009">Toronto Maple Leafs</option>
+                                <option value="ID010">Montreal Canadiens</option>
                             </select>
                         </span></li>
                     <li class="team team-bottom">&nbsp;<span class="score">&nbsp;
                             <select id="centralsecond">
                                 <option value="None">-- Select --</option>
-                                <option value="ID011">Florida Panthers</option>
-                                <option value="ID012" selected>Tampa Bay Lightning</option>
+                                <option value="ID011">Edmonton Oilers</option>
+                                <option value="ID012">Winnepeg Jets</option>
                             </select>
                         </span></li>
                 </ul>
-                <ul class="matchup">
-                    <li class="team team-top">&nbsp;<span class="score">&nbsp;
+            </div> <!-- END ROUND TWO -->
 
-                            <select id="northfirst">
-                                <option value="None">-- Select --</option>
-                                <option value="ID013">Toronto Maple Leafs</option>
-                                <option value="ID014" selected>Montreal Canadiens</option>
-                            </select>
-                        </span></li>
-                    <li class="team team-bottom">&nbsp;<span class="score">&nbsp;
-                            <select id="northsecond">
-                                <option value="None">-- Select --</option>
-                                <option value="ID015">Edmonton Oilers</option>
-                                <option value="ID016" selected>Winnepeg Jets</option>
-                            </select></span></li>
-                </ul>
-            </div> <!-- END ROUND THREE -->
-
-            <div class="round round-two">
+            <div class="round round-one">
                 <div class="round-details">Round 1<br /><span class="date">March 18</span></div>
                 <ul class="matchup">
-                    <li class="team team-top">&nbsp;<span class="score">&nbsp;</span>Carolina Hurricanes</li>
-                    <li class="team team-bottom">&nbsp;<span class="score">&nbsp;</span>Nashville Predators</li>
+                    <li class="team team-top">&nbsp;<span class="score">&nbsp;</span>Pittsburgh Penguins</li>
+                    <li class="team team-bottom">&nbsp;<span class="score">&nbsp;</span>New York Islanders</li>
                 </ul>
                 <ul class="matchup">
-                    <li class="team team-top">&nbsp;<span class="score">&nbsp;</span>Florida Panthers</li>
-                    <li class="team team-bottom">&nbsp;<span class="score">&nbsp;</span>Tampa Bay Lightning</li>
+                    <li class="team team-top">&nbsp;<span class="score">&nbsp;</span>Washington Capitals</li>
+                    <li class="team team-bottom">&nbsp;<span class="score">&nbsp;</span>Boston Bruins</li>
                 </ul>
                 <ul class="matchup">
                     <li class="team team-top">&nbsp;<span class="score">&nbsp;</span>Toronto Maple Leafs</li>
@@ -200,7 +239,7 @@
                     <li class="team team-top">&nbsp;<span class="score">&nbsp;</span>Edmonton Oilers</li>
                     <li class="team team-bottom">&nbsp;<span class="score">&nbsp;</span>Winnepeg Jets</li>
                 </ul>
-            </div> <!-- END ROUND TWO -->
+            </div> <!-- END ROUND ONE -->
         </div>
     </div>
 </section>
