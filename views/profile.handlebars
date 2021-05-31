@@ -9,7 +9,7 @@
     {{#each brackets as |bracket|}}
     <div class="row mb-2">
       <div class="col-md-8">
-        <p>{{bracket.id}}</p>
+        <p><a href="/bracket/{{bracket.id}}">View bracket: id#{{bracket.id}}</a></p>
       </div>
       <div class="col-md-4">
         <button class="btn btn-sm btn-danger" data-id="{{bracket.id}}">DELETE</button>
