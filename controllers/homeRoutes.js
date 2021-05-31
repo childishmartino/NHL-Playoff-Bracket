@@ -59,7 +59,7 @@ router.get('/bracket/:id', async (req, res) => {
 
     const bracket = bracketData.get({ plain: true });
 
-    res.render('bracket', {
+    res.render('completeb', {
       ...bracket,
       logged_in: req.session.logged_in
     });
