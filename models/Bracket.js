@@ -11,7 +11,19 @@ Bracket.init(
       primaryKey: true,
       autoIncrement: true,
     },
-    name: {
+    west1: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    west2: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    east1: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    east2: {
       type: DataTypes.STRING,
       allowNull: false,
     },
@@ -31,47 +43,27 @@ Bracket.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
-    east1: {
+    west_semi: {
       type: DataTypes.STRING,
       allowNull: false,
     },
-    east2: {
+    east_semi: {
       type: DataTypes.STRING,
       allowNull: false,
     },
-    west1: {
+    central_semi: {
       type: DataTypes.STRING,
       allowNull: false,
     },
-    west2: {
+    north_semi: {
       type: DataTypes.STRING,
       allowNull: false,
     },
-    central_quarterfinal: {
+    final1: {
       type: DataTypes.STRING,
       allowNull: false,
     },
-    north_quarterfinal: {
-      type: DataTypes.STRING,
-      allowNull: false,
-    },
-    east_quaterfinal: {
-      type: DataTypes.STRING,
-      allowNull: false,
-    },
-    west_quaterfinal: {
-      type: DataTypes.STRING,
-      allowNull: false,
-    },
-    n_v_c_semi_final: {
-      type: DataTypes.STRING,
-      allowNull: false,
-    },
-    e_v_w_semi_final: {
-      type: DataTypes.STRING,
-      allowNull: false,
-    },
-    final: {
+    final2: {
       type: DataTypes.STRING,
       allowNull: false,
     },
