@@ -1,0 +1,104 @@
+<div class="row">
+    <div class="col-auto">
+        <h2>Welcome, {{user.name}}!</h2>
+    </div>
+</div>
+<section id="bracket">
+    <div class="container">
+        <div class="split split-one">
+            <div class="round round-one">
+                <div class="round-details">Round 1<br /><span class="date">March 18</span></div>
+                <ul class="matchup">
+                    <li class="team team-top">&nbsp;<span class="score">&nbsp;</span>Colorado Avalanche</li>
+                    <li class="team team-bottom">&nbsp;<span class="score">&nbsp;</span>Saint Louis Blues</li>
+                </ul>
+                <ul class="matchup">
+                    <li class="team team-top">&nbsp;<span class="score">&nbsp;</span>Las Vegas Golden Knights</li>
+                    <li class="team team-bottom">&nbsp;<span class="score">&nbsp;</span>Minnesota Wild</li>
+                </ul>
+                <ul class="matchup">
+                    <li class="team team-top">&nbsp;<span class="score">&nbsp;</span>Carolina Hurricanes</li>
+                    <li class="team team-bottom">&nbsp;<span class="score">&nbsp;</span>Nashville Predators</li>
+                </ul>
+                <ul class="matchup">
+                    <li class="team team-top">&nbsp;<span class="score">&nbsp;</span>Florida Panthers</li>
+                    <li class="team team-bottom">&nbsp;<span class="score">&nbsp;</span>Tampa Bay Lightning</li>
+                </ul>
+            </div> <!-- END ROUND ONE -->
+
+            <div class="round round-two">
+                <div class="round-details">Round 2<br /><span class="date">March 22</span></div>
+                <ul class="matchup">
+                    <li class="team team-top">&nbsp;<span class="score">&nbsp;{{west1}}</span></li>
+                    <li class="team team-bottom">&nbsp;<span class="score">&nbsp;{{west2}}</span></li>
+                </ul>
+                <ul class="matchup">
+                    <li class="team team-top">&nbsp;<span class="score">&nbsp;{{central1}}</span></li>
+                    <li class="team team-bottom">&nbsp;<span class="score">&nbsp;{{central2}}</span></li>
+                </ul>
+            </div> <!-- END ROUND TWO -->
+        </div>
+
+        <div class="champion">
+            <div class="semis-l">
+                <div class="round-details">Semifinals <br /><span class="date">March 26-28</span></div>
+                <ul class="matchup championship">
+                    <li class="team team-top">&nbsp;<span class="vote-count">&nbsp;{{west_semi}}</span></li>
+                    <li class="team team-bottom">&nbsp;<span class="vote-count">&nbsp;{{east_semi}}</span></li>
+                </ul>
+            </div>
+            <div class="final">
+                <i class="fa fa-trophy"></i>
+                <div class="round-details">Championship <br /><span class="date">March 30 - Apr. 1</span></div>
+                <ul class="matchup championship">
+                    <li class="team team-top">&nbsp;<span class="vote-count">&nbsp;{{final1}}</span></li>
+                    <li class="team team-bottom">&nbsp;<span class="vote-count">&nbsp;{{final2}}</span></li>
+                </ul>
+            </div>
+            <div class="semis-r">
+                <div class="round-details">Semifinals <br /><span class="date">March 26-28</span></div>
+                <ul class="matchup championship">
+                    <li class="team team-top">&nbsp;<span class="vote-count">&nbsp;{{central_semi}}</span></li>
+                    <li class="team team-bottom">&nbsp;<span class="vote-count">&nbsp;{{north_semi}}</span></li>
+                </ul>
+            </div>
+        </div>
+
+
+        <div class="split split-two">
+
+
+            <div class="round round-two">
+                <div class="round-details">Round 2<br /><span class="date">March 22</span></div>
+                <ul class="matchup">
+                    <li class="team team-top">&nbsp;<span class="score">&nbsp;{{east1}}</span></li>
+                    <li class="team team-bottom">&nbsp;<span class="score">&nbsp;{{east2}}</span></li>
+                </ul>
+                <ul class="matchup">
+                    <li class="team team-top">&nbsp;<span class="score">&nbsp;{{north1}}</span></li>
+                    <li class="team team-bottom">&nbsp;<span class="score">&nbsp;{{north2}}</span></li>
+                </ul>
+            </div> <!-- END ROUND TWO -->
+
+            <div class="round round-one">
+                <div class="round-details">Round 1<br /><span class="date">March 18</span></div>
+                <ul class="matchup">
+                    <li class="team team-top">&nbsp;<span class="score">&nbsp;</span>Pittsburgh Penguins</li>
+                    <li class="team team-bottom">&nbsp;<span class="score">&nbsp;</span>New York Islanders</li>
+                </ul>
+                <ul class="matchup">
+                    <li class="team team-top">&nbsp;<span class="score">&nbsp;</span>Washington Capitals</li>
+                    <li class="team team-bottom">&nbsp;<span class="score">&nbsp;</span>Boston Bruins</li>
+                </ul>
+                <ul class="matchup">
+                    <li class="team team-top">&nbsp;<span class="score">&nbsp;</span>Toronto Maple Leafs</li>
+                    <li class="team team-bottom">&nbsp;<span class="score">&nbsp;</span>Montreal Canadiens</li>
+                </ul>
+                <ul class="matchup">
+                    <li class="team team-top">&nbsp;<span class="score">&nbsp;</span>Edmonton Oilers</li>
+                    <li class="team team-bottom">&nbsp;<span class="score">&nbsp;</span>Winnepeg Jets</li>
+                </ul>
+            </div> <!-- END ROUND ONE -->
+        </div>
+    </div>
+</section>

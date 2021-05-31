@@ -138,9 +138,9 @@ async function submitBracket(event) {
     const east1 = document.getElementById("east1").value;
     const east2 = document.getElementById("east2").value;
     const central1 = document.getElementById("central1").value;
-    const central2 = document.getElementById("central1").value;
+    const central2 = document.getElementById("central2").value;
     const north1 = document.getElementById("north1").value;
-    const north2 = document.getElementById("north1").value;
+    const north2 = document.getElementById("north2").value;
     const west_semi = document.getElementById("westSemi").value;
     const east_semi = document.getElementById("eastSemi").value;
     const central_semi = document.getElementById("centralSemi").value;
