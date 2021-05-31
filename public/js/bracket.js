@@ -5,7 +5,7 @@ westFirst = () => {
     const option1 = document.createElement("option");
     option1.innerText = west1;
     option1.setAttribute("value", west1);
-    westSemi.appendChild(option1);  
+    westSemi.appendChild(option1);
 };
 
 westSecond = () => {
@@ -25,7 +25,7 @@ eastFirst = () => {
     const option1 = document.createElement("option");
     option1.innerText = east1;
     option1.setAttribute("value", east1);
-    eastSemi.appendChild(option1); 
+    eastSemi.appendChild(option1);
 };
 
 eastSecond = () => {
@@ -35,7 +35,7 @@ eastSecond = () => {
     const option2 = document.createElement("option");
     option2.innerText = east2;
     option2.setAttribute("value", east2);
-    eastSemi.appendChild(option2); 
+    eastSemi.appendChild(option2);
 };
 
 centralFirst = () => {
@@ -45,7 +45,7 @@ centralFirst = () => {
     const option1 = document.createElement("option");
     option1.innerText = central1;
     option1.setAttribute("value", central1);
-    centralSemi.appendChild(option1); 
+    centralSemi.appendChild(option1);
 };
 
 centralSecond = () => {
@@ -55,7 +55,7 @@ centralSecond = () => {
     const option2 = document.createElement("option");
     option2.innerText = central2;
     option2.setAttribute("value", central2);
-    centralSemi.appendChild(option2); 
+    centralSemi.appendChild(option2);
 };
 
 northFirst = () => {
@@ -65,7 +65,7 @@ northFirst = () => {
     const option1 = document.createElement("option");
     option1.innerText = north1;
     option1.setAttribute("value", north1);
-    northSemi.appendChild(option1);   
+    northSemi.appendChild(option1);
 };
 
 northSecond = () => {
@@ -117,3 +117,63 @@ northSemi = () => {
     option2.setAttribute("value", northSemi);
     northFinal.appendChild(option2);
 };
+
+showButton = () => {
+    const final1 = document.getElementById("final1").value;
+    const final2 = document.getElementById("final2").value;
+    const submit = document.getElementById("submit-bracket");
+
+    if ((final1 !== "") || (final2 !== "")) {
+        submit.classList.remove("hide")
+    };
+};
+
+async function submitBracket(event) {
+    event.preventDefault();
+
+    const west1 = document.getElementById("west1").value;
+    const west2 = document.getElementById("west2").value;
+    const east1 = document.getElementById("east1").value;
+    const east2 = document.getElementById("east2").value;
+    const central1 = document.getElementById("central1").value;
+    const central2 = document.getElementById("central1").value;
+    const north1 = document.getElementById("north1").value;
+    const north2 = document.getElementById("north1").value;
+    const west_semi = document.getElementById("westSemi").value;
+    const east_semi = document.getElementById("eastSemi").value;
+    const central_semi = document.getElementById("centralSemi").value;
+    const north_semi = document.getElementById("northSemi").value;
+    const final1 = document.getElementById("final1").value;
+    const final2 = document.getElementById("final2").value;
+
+    const response = await fetch(`/api/bracket`, {
+        method: 'POST',
+        body: JSON.stringify({
+            west1,
+            west2,
+            east1,
+            east2,
+            central1,
+            central2,
+            north1,
+            north2,
+            west_semi,
+            east_semi,
+            central_semi,
+            north_semi,
+            final1,
+            final2,
+        }),
+        headers: {
+            'Content-Type': 'application/json',
+        },
+    });
+
+    if (response.ok) {
+        document.location.replace('/');
+    } else {
+        alert('Failed to create bracket');
+    }
+}
+
+document.querySelector('.submit-bracket').addEventListener('click', submitBracket);

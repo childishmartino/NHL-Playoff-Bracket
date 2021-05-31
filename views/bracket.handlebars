@@ -84,16 +84,19 @@
                 <div class="round-details">Championship <br /><span class="date">March 30 - Apr. 1</span></div>
                 <ul class="matchup championship">
                     <li class="team team-top">&nbsp;<span class="vote-count">&nbsp;
-                            <select id="final1" class="hide">
+                            <select id="final1" onchange="showButton()" class="hide">
                                 <option value="None">-- Select --</option>
                             </select>
                         </span></li>
                     <li class="team team-bottom">&nbsp;<span class="vote-count">&nbsp;
-                            <select id="final2" class="hide">
+                            <select id="final2" onchange="showButton()" class="hide">
                                 <option value="None">-- Select --</option>
                             </select>
                         </span></li>
                 </ul>
+            </div>
+            <div>
+                <button id="submit-bracket" type="button" class="btn btn-primary btn-sm submit-bracket hide">Submit Bracket</button>
             </div>
             <div class="semis-r">
                 <div class="round-details">Semifinals <br /><span class="date">March 26-28</span></div>
