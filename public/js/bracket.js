@@ -123,9 +123,11 @@ showButton = () => {
     const final2 = document.getElementById("final2").value;
     const submit = document.getElementById("submit-bracket");
 
-    if ((final1 !== "") || (final2 !== "")) {
+    if ((final1 !== "None") && (final2 !== "None")) {
         submit.classList.remove("hide")
-    };
+    } else
+    return;
+
 };
 
 async function submitBracket(event) {
