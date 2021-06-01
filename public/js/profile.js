@@ -14,7 +14,8 @@ const delButtonHandler = async (event) => {
   }
 };
 
+const deleteBtn = document.getElementsByClassName('btn')
 
-document
-  .querySelector('.bracket-list')
-  .addEventListener('click', delButtonHandler);
+for (i = 0; i < deleteBtn.length; i++) {
+  deleteBtn[i].addEventListener("click", delButtonHandler);
+};
